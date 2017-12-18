@@ -16,4 +16,6 @@ return [
     WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     FOS\ElasticaBundle\FOSElasticaBundle::class => ['all' => true],
+    Enqueue\Bundle\EnqueueBundle::class => ['all' => true],
+    Enqueue\ElasticaBundle\EnqueueElasticaBundle::class => ['all' => true],
 ];

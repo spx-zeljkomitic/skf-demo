@@ -10,13 +10,21 @@ fos_elastica:
                         id:
                             index: not_analyzed
                             type: integer
+
                         name:
                             type: string
                             index: not_analyzed
-                        manufacturer:
+
+                        manufacturer_id:
                           property_path: manufacturer.id
                           type: integer
                           index: not_analyzed
+
+                        manufacturer_name:
+                          property_path: manufacturer.name
+                          type: string
+                          index: not_analyzed
+
                     persistence:
                         driver: orm
                         model: App\Entity\Product

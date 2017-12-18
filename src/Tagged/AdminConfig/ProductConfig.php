@@ -35,6 +35,7 @@ class ProductConfig implements AdminConfigInterface
         return [
             'id',
             'name',
+            'manufacturer',
         ];
     }
 }

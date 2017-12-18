@@ -83,6 +83,36 @@
     "elasticsearch/elasticsearch": {
         "version": "v6.0.0"
     },
+    "enqueue/async-event-dispatcher": {
+        "version": "0.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.7",
+            "ref": "9e937ccb79e08b978f91fb816d4e6d645813113a"
+        }
+    },
+    "enqueue/elastica-bundle": {
+        "version": "0.8.x-dev"
+    },
+    "enqueue/enqueue": {
+        "version": "0.8.x-dev"
+    },
+    "enqueue/enqueue-bundle": {
+        "version": "0.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.4",
+            "ref": "daaea0035c3abd612f71f0288d5c20197c3c34ad"
+        }
+    },
+    "enqueue/fs": {
+        "version": "0.8.x-dev"
+    },
+    "enqueue/null": {
+        "version": "0.8.x-dev"
+    },
     "friendsofphp/php-cs-fixer": {
         "version": "2.2",
         "recipe": {
@@ -116,6 +146,9 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "makasim/temp-file": {
+        "version": "0.2.0"
+    },
     "ocramius/package-versions": {
         "version": "1.2.0"
     },
@@ -124,6 +157,9 @@
     },
     "pagerfanta/pagerfanta": {
         "version": "v1.0.5"
+    },
+    "paragonie/random_compat": {
+        "version": "v2.0.11"
     },
     "php-cs-fixer/diff": {
         "version": "v1.2.0"
@@ -139,6 +175,12 @@
     },
     "psr/simple-cache": {
         "version": "1.0.0"
+    },
+    "queue-interop/queue-interop": {
+        "version": "0.6.x-dev"
+    },
+    "ramsey/uuid": {
+        "version": "3.x-dev"
     },
     "react/promise": {
         "version": "2.x-dev"

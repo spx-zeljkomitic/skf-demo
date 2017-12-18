@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Product;
 use App\Service\AdminConfigCollector;
 use FOS\ElasticaBundle\Finder\TransformedFinder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -30,7 +29,10 @@ class AdminController
     public function segmentAction(AdminConfigCollector $adminConfigCollector, Request $request, TransformedFinder $productsFinder)
     {
         $fieldQuery = new Query\Match();
-        $fieldQuery->setField('manufacturer', '1');
+        $fieldQuery->setField('manufacturer_name', 'Blick, Wyman and Orn');
+
+//        $fieldQuery = new Query\Terms();
+//        $fieldQuery->setTerms('manufacturer_id', [1,2]);
 
 
         $query = new Query(

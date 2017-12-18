@@ -38,6 +38,11 @@ class Manufacturer
         $this->products = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return (string)$this->name;
+    }
+
     public function getId()
     {
         return $this->id;

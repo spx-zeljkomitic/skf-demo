@@ -12,6 +12,8 @@
         "php": "^7.2",
         "ext-iconv": "*",
         "doctrine/doctrine-fixtures-bundle": "^3.0",
+        "enqueue/elastica-bundle": "^0.8.0@dev",
+        "enqueue/fs": "^0.8.0@dev",
         "friendsofsymfony/elastica-bundle": "^5.0@dev",
         "fzaninotto/faker": "^1.7",
         "sensio/framework-extra-bundle": "^5.1",
@@ -82,7 +84,7 @@
     "extra": {
         "symfony": {
             "id": "01C1CKFXPH8XGBF1DQF5NNWM0Q",
-            "allow-contrib": false
+            "allow-contrib": true
         }
     }
 }
