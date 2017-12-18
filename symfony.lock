@@ -80,6 +80,9 @@
     "doctrine/orm": {
         "version": "v2.5.13"
     },
+    "elasticsearch/elasticsearch": {
+        "version": "v6.0.0"
+    },
     "friendsofphp/php-cs-fixer": {
         "version": "2.2",
         "recipe": {
@@ -89,8 +92,26 @@
             "ref": "9d60c231a92e69c68b89897813ec4931d0697b1f"
         }
     },
+    "friendsofsymfony/elastica-bundle": {
+        "version": "5.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "5.0",
+            "ref": "3f73f240ee0c3719e89f1c994ce66904e2ef84f6"
+        }
+    },
+    "fzaninotto/faker": {
+        "version": "v1.7.1"
+    },
     "gecko-packages/gecko-php-unit": {
         "version": "v3.0"
+    },
+    "guzzlehttp/ringphp": {
+        "version": "1.1-dev"
+    },
+    "guzzlehttp/streams": {
+        "version": "3.0-dev"
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
@@ -100,6 +121,9 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.2.0"
+    },
+    "pagerfanta/pagerfanta": {
+        "version": "v1.0.5"
     },
     "php-cs-fixer/diff": {
         "version": "v1.2.0"
@@ -116,6 +140,12 @@
     "psr/simple-cache": {
         "version": "1.0.0"
     },
+    "react/promise": {
+        "version": "2.x-dev"
+    },
+    "ruflin/elastica": {
+        "version": "6.0.x-dev"
+    },
     "sensio/framework-extra-bundle": {
         "version": "4.0",
         "recipe": {
@@ -124,6 +154,9 @@
             "version": "4.0",
             "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
         }
+    },
+    "symfony/asset": {
+        "version": "v4.0.2"
     },
     "symfony/browser-kit": {
         "version": "v4.0.2"
@@ -211,6 +244,15 @@
     },
     "symfony/lts": {
         "version": "4-dev"
+    },
+    "symfony/maker-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
+        }
     },
     "symfony/options-resolver": {
         "version": "v4.0.2"
@@ -314,11 +356,23 @@
             "ref": "c72d107d077f1654428edaed69415d0228c1aefe"
         }
     },
+    "symfony/webpack-encore-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "33e24612742ddabc012f0c20d870c79843d45715"
+        }
+    },
     "symfony/yaml": {
         "version": "v4.0.2"
     },
     "twig/twig": {
         "version": "v2.4.4"
+    },
+    "white-october/pagerfanta-bundle": {
+        "version": "v1.1.1"
     },
     "zendframework/zend-code": {
         "version": "3.3.0"

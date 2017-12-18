@@ -1,0 +1,27 @@
+# Read the documentation: https://github.com/FriendsOfSymfony/FOSElasticaBundle/blob/master/Resources/doc/setup.md
+fos_elastica:
+    clients:
+        default: { host: localhost, port: 9200 }
+    indexes:
+        app:
+            types:
+                product:
+                    properties:
+                        id:
+                            index: not_analyzed
+                            type: integer
+                        name:
+                            type: string
+                            index: not_analyzed
+                        manufacturer:
+                          property_path: manufacturer.id
+                          type: integer
+                          index: not_analyzed
+                    persistence:
+                        driver: orm
+                        model: App\Entity\Product
+                        provider:
+                            batch_size: 100
+                        finder: ~
+                        listener: ~
+

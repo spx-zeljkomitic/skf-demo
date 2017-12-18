@@ -2,17 +2,29 @@
 
 namespace App;
 
+use App\Model\AdminConfigInterface;
+use App\Service\AdminConfigCollector;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use Symfony\Component\DependencyInjection\Compiler\PriorityTaggedServiceTrait;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
-class Kernel extends BaseKernel
+class Kernel extends BaseKernel implements CompilerPassInterface
 {
     use MicroKernelTrait;
+    use PriorityTaggedServiceTrait;
 
     const CONFIG_EXTS = '.{php,xml,yaml,yml}';
+
+    public function process(ContainerBuilder $container)
+    {
+        $definition = $container->getDefinition(AdminConfigCollector::class);
+        $tagged = $this->findAndSortTaggedServices('app.admin_config_interface', $container);
+        $definition->setArgument(0, $tagged);
+    }
 
     public function getCacheDir()
     {
@@ -36,6 +48,9 @@ class Kernel extends BaseKernel
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
     {
+        // cleaner than services.yaml
+        $container->registerForAutoconfiguration(AdminConfigInterface::class)->addTag('app.admin_config_interface');
+
         $container->setParameter('container.autowiring.strict_mode', true);
         $container->setParameter('container.dumper.inline_class_loader', true);
         $confDir = $this->getProjectDir().'/config';

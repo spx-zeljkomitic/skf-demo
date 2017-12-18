@@ -1,0 +1,25 @@
+{% extends "admin_base.html.twig" %}
+
+{% block detailed %}
+    <table class="table table-striped table-bordered">
+
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+        </tr>
+
+        {% for row in pager.currentPageResults %}
+        <tr>
+            {% for column in columns %}
+            <td>{{ attribute(row, column) }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+    {{ pagerfanta(pager, 'twitter_bootstrap3') }}
+
+{% endblock detailed %}
+
